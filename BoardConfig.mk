@@ -158,6 +158,10 @@ BOARD_ROOT_EXTRA_SYMLINKS := \
 # Sensors
 USE_SENSOR_MULTI_HAL := true
 
+#sepolicy
+include device/qcom/sepolicy/sepolicy.mk
+BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+
 # Properties
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
